@@ -1,6 +1,6 @@
 node {
     def app
-    
+
     stage('Clone repository') {
         /* Cloning the Repository to our Workspace */
 
@@ -14,9 +14,7 @@ node {
 
     stage('Test image') {
         
-        app.inside {
             echo "Tests passed"
-        }
     }
 
     stage('Push image') {
