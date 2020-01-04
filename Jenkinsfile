@@ -1,6 +1,5 @@
 node {
-    def app
-
+    
     stage('Clone repository') {
         /* Cloning the Repository to our Workspace */
 
@@ -9,8 +8,7 @@ node {
 
     stage('Build image') {
         /* This builds the actual image */
-
-        app = docker.build("sandeepksingh1/webserver-image:v1")
+        /usr/local/bin/docker build . -t sandeep99063/webserver-image
     }
 
     stage('Test image') {
