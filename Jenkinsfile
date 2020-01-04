@@ -9,8 +9,10 @@ node {
 
     stage('Build image') {
         /* This builds the actual image */
+        echo "Trying to  Build to Docker Image"
+        
+        app = docker.build("sandeepksingh1/webserver-image")
 
-        app = docker.build("sandeepksingh1/webserver-image:v1")
     }
 
     stage('Test image') {
