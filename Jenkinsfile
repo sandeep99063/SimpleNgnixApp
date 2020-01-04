@@ -8,7 +8,7 @@ node {
 
     stage('Build image') {
         /* This builds the actual image */
-        /usr/local/bin/docker build . -t sandeep99063/webserver-image
+        sh "/usr/local/bin/docker build . -t sandeep99063/webserver-image"
     }
 
     stage('Test image') {
