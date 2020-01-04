@@ -9,12 +9,15 @@ node {
 
     stage('Build image') {
         /* This builds the actual image */
-        sh "/usr/local/bin/docker build . -t sandeep99063/webserver-image"
+
+        app = docker.build("sandeepksingh1/nodeapp")
     }
 
     stage('Test image') {
         
+        app.inside {
             echo "Tests passed"
+        }
     }
 
     stage('Push image') {
